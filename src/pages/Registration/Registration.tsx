@@ -11,10 +11,12 @@ const Registration = () => {
     firstName: '',
     lastName: '',
     email: '',
-    occupation: '',
+    dateOfBirth: '',
+    gender: '',
+    country: '',
     phoneNumber: '',
     password: '',
-    confirmPassword: ''
+    confirm_Password: ''
   });
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -26,9 +28,10 @@ const Registration = () => {
 
   const handleSubmit =async (event: React.FormEvent) => {
     event.preventDefault();
+    // console.log(formData)
 
     try{
-      const response = await axios.post('', formData);
+      const response = await axios.post('https://localhost:7085/api/users/sign-up', formData);
       console.log(response.data);
     } catch (error) {
       console.error(error)
@@ -43,32 +46,40 @@ const Registration = () => {
         children={
           <form onSubmit={handleSubmit} className="form" id="form">
             <div className="box">
-              <label htmlFor="Fname">First-Name</label>
-              <input type="text" name="Fname" id="Fname" value={formData.firstName} onChange={handleInputChange} required />
+              <label htmlFor="firstName">First Name</label>
+              <input type="text" name="firstName" id="firstName" value={formData.firstName} onChange={handleInputChange} required />
             </div>
             <div className="box">
-              <label htmlFor="Lname">Last-Name</label>
-              <input type="text" name="Lname" id="Lname" value={formData.lastName} onChange={handleInputChange} required />
+              <label htmlFor="lastName">Last Name</label>
+              <input type="text" name="lastName" id="lastName" value={formData.lastName} onChange={handleInputChange} required />
             </div>
             <div className="box">
               <label htmlFor="email">Email Address</label>
               <input type="email" name="email" id="email" value={formData.email} onChange={handleInputChange} required />
             </div>
             <div className="box">
-              <label htmlFor="occupation">Occupation</label>
-              <input type="text" name="occupation" id="occupation" value={formData.occupation} onChange={handleInputChange} required />
+              <label htmlFor="dateOfBirth">Date of Birth</label>
+              <input type="date" name="dateOfBirth" id="dateOfBirth" value={formData.dateOfBirth} onChange={handleInputChange} required />
             </div>
             <div className="box">
-              <label htmlFor="phone">Phone Number</label>
-              <input type="tel" name="phone" id="phone" value={formData.phoneNumber} onChange={handleInputChange} required />
+              <label htmlFor="gender">Gender</label>
+              <input type="text" name="gender" id="gender" value={formData.gender} onChange={handleInputChange} required />
             </div>
             <div className="box">
-              <label htmlFor="phone">Password</label>
-              <input type="password" name="pass" id="pass" value={formData.password} onChange={handleInputChange} required />
+              <label htmlFor="country">Country</label>
+              <input type="text" name="country" id="country" value={formData.country} onChange={handleInputChange} required />
             </div>
             <div className="box">
-              <label htmlFor="phone">Confirm Password</label>
-              <input type="password" name="pass" id="pass" value={formData.confirmPassword} onChange={handleInputChange} required />
+              <label htmlFor="phoneNumber">Phone Number</label>
+              <input type="tel" name="phoneNumber" id="phoneNumber" value={formData.phoneNumber} onChange={handleInputChange} required />
+            </div>
+            <div className="box">
+              <label htmlFor="password">Password</label>
+              <input type="password" name="password" id="password" value={formData.password} onChange={handleInputChange} required />
+            </div>
+            <div className="box">
+              <label htmlFor="confirm_Password">Confirm Password</label>
+              <input type="password" name="confirm_Password" id="confirm_Password" value={formData.confirm_Password} onChange={handleInputChange} required />
             </div>
             <div className="buttons">
               <button type="submit" id="next">
