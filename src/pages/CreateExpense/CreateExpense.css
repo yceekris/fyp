@@ -1,0 +1,44 @@
+.createEx{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.createEx button{
+    margin-top: 1rem;
+    background: transparent;
+    border: 1px solid;
+    border-radius: 20px;
+    padding: 0.7rem 2rem;
+    font-size: 18px;
+    margin: 2rem 0;
+    width: 20%;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+.createEx button:hover{
+    background: linear-gradient(45deg, rgba(194, 56, 204, 0.8), rgba(181, 84, 242, 1)),
+    linear-gradient(-45deg, rgba(181, 84, 242, 1), rgba(194, 56, 204, 0.8)),
+    linear-gradient(45deg,rgba(194, 56, 204, 1), rgba(181, 84, 242, 0.5));
+    transform: scale(1.03);
+    border: none;
+}
+
+.box{
+    border-bottom: 2px solid;
+    padding: 1rem;
+    width: 100%;
+}
+
+.box input:first-child{
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(181, 84, 242, 1);
+}
+
+.box input:first-child:focus{
+    outline: none;
+    border: none;
+}

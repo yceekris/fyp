@@ -3,9 +3,14 @@ import Nav from "../../components/Nav/Nav";
 import './Registation.css'
 
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from 'axios'
 
+
 const Registration = () => {
+  const navigate = useNavigate();
+
+  const [otpSent, setOtpSent] = useState(false);
 
   const [formData, setFormData] = useState({
     firstName: '',
@@ -34,6 +39,12 @@ const Registration = () => {
     try{
       const response = await axios.post('https://localhost:7085/api/users/sign-up', formData);
       console.log(response.data);
+
+      await axios.post('https://localhost:7085/api/send-otp', { email: formData.email });
+      setOtpSent(true);
+
+      otpSent ? navigate('/verify-otp') : null;
+
     } catch (error) {
       console.error(error)
     }
