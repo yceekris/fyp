@@ -19,6 +19,7 @@ const Registration = () => {
     confirm_Password: ''
   });
 
+
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
       ...formData,

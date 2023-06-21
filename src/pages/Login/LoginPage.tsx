@@ -22,7 +22,7 @@ const LoginPage = () => {
     event.preventDefault();
     
     try {
-      const response = await axios.post('', formData);
+      const response = await axios.post('https://localhost:7085/api/users/auth', formData);
       // Handle success response
       console.log(response.data);
     } catch (error) {
