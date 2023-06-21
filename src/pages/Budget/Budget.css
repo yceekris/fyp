@@ -1,0 +1,74 @@
+.budget{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.budget-text{
+    /* border: 1px solid; */
+    width: fit-content;
+    margin: 2rem 0;
+}
+
+.budget-cards{
+    /* border: 1px solid; */
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+}
+
+.budget-cards .card-one, .budget-cards .card-two{
+    /* border: 1px solid; */
+    width: 20%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    font-size: 24px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.15s linear;
+}
+
+.budget-cards .card-one:hover, .budget-cards .card-two:hover{
+    transform: scale(1.1);
+}
+
+.budget-cards .card-two{
+    background: linear-gradient(45deg, rgba(194, 56, 204, 0.8), rgba(181, 84, 242, 1)),
+    linear-gradient(-45deg, rgba(181, 84, 242, 1), rgba(194, 56, 204, 0.8)),
+    linear-gradient(45deg,rgba(194, 56, 204, 1), rgba(181, 84, 242, 0.5));
+}
+
+.budget-cards .card-one{
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+    linear-gradient(-45deg, rgba(255, 255, 255, 1), rgba(181, 84, 242, 1)),
+    linear-gradient(45deg,rgba(255, 255, 255, 0.8), rgba(181, 84, 242, 1));
+    /* background-blend-mode: screen; */
+    color: #000000;
+}
+
+.create{
+    margin-top: 1rem;
+    background: transparent;
+    border: 1px solid;
+    border-radius: 20px;
+    padding: 0.7rem 2rem;
+    font-size: 18px;
+    margin: 2rem 0;
+    width: 20%;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+.create:hover{
+    background: linear-gradient(45deg, rgba(194, 56, 204, 0.8), rgba(181, 84, 242, 1)),
+    linear-gradient(-45deg, rgba(181, 84, 242, 1), rgba(194, 56, 204, 0.8)),
+    linear-gradient(45deg,rgba(194, 56, 204, 1), rgba(181, 84, 242, 0.5));
+    transform: scale(1.03);
+    border: none;
+}
