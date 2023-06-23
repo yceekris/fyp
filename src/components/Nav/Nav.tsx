@@ -1,13 +1,7 @@
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
-import "./Nav.css";
+import { Link } from 'react-router-dom'
+import './Nav.css'
 
 const Nav = () => {
-  const navigate = useNavigate();
-
-  const handleClick = () => {
-    navigate("/");
-  };
   return (
     <div className="nav">
       <div className="s-name" id="s-name" onClick={handleClick}>

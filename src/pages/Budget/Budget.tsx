@@ -13,7 +13,7 @@ const Budget = () => {
   return (
     <div className="budget">
       <Nav />
-      <h1 className="budget-text">Budget</h1>
+      <h1 className="budget-text">BUDGETS</h1>
 
       <div className="budget-cards">
         <div className="card-one" onClick={handleClick}>Time Sensitive Budget</div>
