@@ -5,6 +5,7 @@ import Registration from './pages/Registration/Registration';
 import Authentication from './pages/Authentication/Authentication';
 import LoginPage from './pages/Login/LoginPage';
 import CreateExpense from './pages/CreateExpense/CreateExpense';
+import ExpenseInputForm from './pages/ExpenseInput/ExpenseInput';
 import Budget from './pages/Budget/Budget';
 import './App.css'
 
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/register" Component={Registration} />
         <Route path='/auth' Component={Authentication} />
         <Route path='/createres' Component={CreateExpense} />
+        <Route path='/expenseinput' Component={ExpenseInputForm} />
         <Route path='/budget' Component={Budget} />
         <Route path="/dashboard" Component={Dashboard} />
         {/* Add more routes for other pages */}

@@ -91,11 +91,10 @@
 }
 
 .box input{
-    border: none;
+    border: 1px solid;
     padding: 0.8rem 1rem;
     border-radius: 10px;
     color: #000000;
-    background: #FFF;
 }
 
 .box input:focus{

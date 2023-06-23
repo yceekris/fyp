@@ -1,10 +1,11 @@
 import "./Dashboard.css";
 import Nav from "../../components/Nav/Nav";
+import ChartMain from "../../components/ChartMain/ChartMain";
 
 const Dashboard = () => {
   return (
     <div className="dashboard-component">
-      <Nav /> 
+      <Nav />
       <div className="dashboard-container">
         <h2>DASHBOARD</h2>
         <div className="dashboard">
@@ -28,37 +29,7 @@ const Dashboard = () => {
               </div>
             </div>
             <div className="daily-info">
-              <h4>Daily</h4>
-              <div className="daily-bars">
-                <div className="day">
-                  <div className="bar"></div>
-                  <div className="name">Sun</div>
-                </div>
-                <div className="day">
-                  <div className="bar"></div>
-                  <div className="name">Sun</div>
-                </div>
-                <div className="day">
-                  <div className="bar"></div>
-                  <div className="name">Sun</div>
-                </div>
-                <div className="day">
-                  <div className="bar"></div>
-                  <div className="name">Sun</div>
-                </div>
-                <div className="day">
-                  <div className="bar"></div>
-                  <div className="name">Sun</div>
-                </div>
-                <div className="day">
-                  <div className="bar"></div>
-                  <div className="name">Sun</div>
-                </div>
-                <div className="day">
-                  <div className="bar"></div>
-                  <div className="name">Sun</div>
-                </div>
-              </div>
+              <ChartMain />
             </div>
           </div>
           <div className="side-two">
