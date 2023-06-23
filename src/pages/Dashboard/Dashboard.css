@@ -1,0 +1,183 @@
+.dashboard-component{
+    background: #000;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dashboard-container{
+    /* border: 1px solid; */
+    width: 70%;
+}
+
+.dashboard{
+    background: #FFFFFF;
+    color: #000000;
+    margin: 0 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+}
+
+.dashboard .side-one, .dashboard .side-two{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.dashboard .side-one h3{
+    margin: 1rem 0;
+}
+
+.dashboard .side-one h3 span:nth-child(1){
+    margin-left: 1rem;
+}
+
+.dashboard .side-one h3 span:nth-child(2){
+    margin-left: 0.5rem;
+}
+
+.dashboard .side-one .money-info{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dashboard .side-one .money-info .info-box{
+    width: 30%;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.dashboard .side-one .money-info .info-box .info-name{
+    margin-top: 1rem;
+    color: #ca5ad9;
+}
+
+.dashboard .side-one .daily-info{
+    margin-top: 6rem;
+}
+
+.dashboard .side-one .daily-info h4{
+    margin-bottom: -3rem;
+}
+
+.dashboard .side-one .daily-info .daily-bars{
+    /* border: 1px solid; */
+    height: 40vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+.dashboard .side-one .daily-info .daily-bars .day{
+    /* border: 1px solid; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+}
+
+.dashboard .side-one .daily-info .daily-bars .day .bar{
+    width: 80%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.dashboard .side-one .daily-info .daily-bars .day:nth-child(1) .bar{
+    background: #4d56a8;
+    height: calc(0.4vh*40);
+}
+.dashboard .side-one .daily-info .daily-bars .day:nth-child(2) .bar{
+    background: #c238cc;
+    height: calc(0.4vh*100);
+}
+.dashboard .side-one .daily-info .daily-bars .day:nth-child(3) .bar{
+    background: #d22b2b;
+    height: calc(0.4vh*70);
+}
+.dashboard .side-one .daily-info .daily-bars .day:nth-child(4) .bar{
+    background: #52981b;
+    height: calc(0.4vh*100);
+}
+.dashboard .side-one .daily-info .daily-bars .day:nth-child(5) .bar{
+    background: #aeb118;
+    height: calc(0.4vh*25);
+}
+.dashboard .side-one .daily-info .daily-bars .day:nth-child(6) .bar{
+    background: #44bec6;
+    height: calc(0.4vh*25);
+}
+.dashboard .side-one .daily-info .daily-bars .day:nth-child(7) .bar{
+    background: #6b1338;
+    height: calc(0.4vh*25);
+}
+
+.dashboard .side-two h3{
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+
+.dashboard .side-two .goal{
+    border-radius: 15px;
+    box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.5);
+    background: #8202ae;
+    padding: 1rem;
+    margin-top: 0.3rem;
+    width: 80%;
+    align-self: center;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard .side-two .goal .text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.progress-doughnut {
+    border: 1px solid;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    font-family: Arial, sans-serif;
+}
+  
+.progress-value {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.progress-svg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.progress-bar-bg {
+    fill: none;
+    stroke: #ddd;
+    stroke-width: 8;
+}
+
+.progress-bar {
+    fill: none;
+    stroke: #ff5722;
+    stroke-width: 8;
+    stroke-dasharray: 0 251.2;
+    stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    transition: stroke-dasharray 0.8s ease-in-out;
+}
+  
