@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 import "./CreateExpense.css";
 
 import Nav from "../../components/Nav/Nav";
@@ -39,6 +40,24 @@ const CreateExpense = () => {
     setExpenseCategories(updatedCategories);
   };
 
+  const handleSubmit = () => {
+    // Prepare the expense data to be sent to the API endpoint
+    const expenseData = {
+      expenseCategories: expenseCategories.map((category) => ({
+        name: category.name,
+        amount: category.amount,
+      })),
+    };
+
+    axios.post('https://localhost:7085/api/budget/create-expense', expenseData)
+    .then(response => {
+      console.log(response.data);
+    })
+    .catch(error => {
+      console.error(error);
+    })
+  };
+
   return (
     <div className="createEx ">
       <Nav />
@@ -63,6 +82,7 @@ const CreateExpense = () => {
           />
         </div>
       ))} />
+      <button type="submit" onSubmit={handleSubmit}>Create</button>
     </div>
   );
 };

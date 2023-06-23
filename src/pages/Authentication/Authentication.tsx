@@ -13,8 +13,8 @@ const Authentication = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("/api/verify-otp", {
-        method: "POST",
+      const response = await fetch("https://localhost:7085/api/users/email-verification/{code}", {
+        method: "GET",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ otp }),
       });
