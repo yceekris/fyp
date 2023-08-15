@@ -4,6 +4,10 @@
     align-items: center;
 }
 
+.expense-input h3{
+    margin: 2rem 0;
+}
+
 select{
     border: 1px solid;
     padding: 0.8rem 1rem;

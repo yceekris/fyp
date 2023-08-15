@@ -1,25 +1,21 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import FormContainer from "../../components/FormContainer/FormContainer";
 import "./ExpenseInput.css";
 import Nav from "../../components/Nav/Nav";
 
 interface ExpenseInput {
   amount: number;
-  category: string;
-  description?: string;
-  paymentMethod?: string;
+  date: string;
 }
 
 const ExpenseInputForm: React.FC = () => {
   const [expense, setExpense] = useState<ExpenseInput>({
     amount: 0,
-    category: "",
-    description: "",
-    paymentMethod: "",
+    date: "",
   });
 
   const handleInputChange = (
-    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    event: React.ChangeEvent<HTMLInputElement>
   ) => {
     const { name, value } = event.target;
     setExpense((prevExpense) => ({
@@ -35,15 +31,14 @@ const ExpenseInputForm: React.FC = () => {
     // Reset the form after submission
     setExpense({
       amount: 0,
-      category: "",
-      description: "",
-      paymentMethod: "",
+      date: "",
     });
   };
 
   return (
     <div className="expense-input">
       <Nav />
+      <h3>Enter Your Total Expenses For Today</h3>
       <FormContainer
         container_class="form-container"
         children={
@@ -59,44 +54,19 @@ const ExpenseInputForm: React.FC = () => {
                 required
               />
             </div>
+           
             <div className="box">
-              <label htmlFor="category">Category:</label>
+              <label htmlFor="date">Day:</label>
               <input
-                type="text"
-                id="category"
-                name="category"
-                value={expense.category}
+                type="date"
+                id="date"
+                name="date"
+                value={expense.date}
                 onChange={handleInputChange}
                 required
               />
             </div>
-            <div className="box">
-              <label htmlFor="description">Description:</label>
-              <textarea
-                id="description"
-                name="description"
-                value={expense.description}
-                onChange={handleInputChange}
-              />
-            </div>
-            <div className="box">
-              <label htmlFor="paymentMethod">Payment Method:</label>
-              <select
-                id="paymentMethod"
-                name="paymentMethod"
-                value={expense.paymentMethod}
-                onChange={handleInputChange}
-                required
-              >
-                <option value="">Select Payment Method</option>
-                <option value="Card">Card</option>
-                <option value="Cash">Cash</option>
-                <option value="Bank Transfer">Bank Transfer</option>
-              </select>
-            </div>
-            <div className="buttons">
-              <button type="submit">Submit</button>
-            </div>
+            
           </form>
         }
       />
